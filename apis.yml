@@ -1,0 +1,32 @@
+aid: microsoft-azure-traffic-manager
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/apis.yml
+apis:
+  - aid: microsoft-azure-traffic-manager:rest-api
+    name: Azure Traffic Manager REST API
+    tags:
+      - DNS Load Balancing
+      - Global Routing
+      - Traffic Distribution
+      - Failover
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://management.azure.com/
+    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/
+    properties:
+      - url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/
+        type: Documentation
+    description: >-
+      Azure Traffic Manager REST API enables DNS-based traffic load balancing for distributing traffic across global Azure regions. It supports configuring routing methods including priority, weighted, performance, geographic, and multivalue for high availability.
+common:
+  - type: Portal
+    url: https://portal.azure.com/
+  - type: Pricing
+    url: https://azure.microsoft.com/en-us/pricing/
+  - type: Terms of Service
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+  - type: Privacy Policy
+    url: https://privacy.microsoft.com/en-us/privacystatement
+  - type: Support
+    url: https://support.microsoft.com/
+maintainers:
+  - name: Kin Lane
+    email: kin@apievangelist.com
