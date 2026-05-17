@@ -29,7 +29,7 @@ apis:
         url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
       - type: Reference
         url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
-      - type: Getting Started
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
   - name: Azure Traffic Manager Endpoints REST API
     description: REST API for managing endpoints within a Traffic Manager profile. Supports adding, updating, and removing Azure, external, and nested endpoints that receive traffic according to the profile's routing method and health monitoring configuration.
@@ -45,7 +45,7 @@ apis:
         url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
       - type: Reference
         url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints?view=rest-trafficmanager-2022-04-01
-      - type: Getting Started
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types
   - name: Azure Traffic Manager Heatmap REST API
     description: REST API for retrieving Traffic Manager heatmap data, which provides geographic visualization of DNS query volumes and endpoint selection by region. Useful for analyzing traffic distribution and routing decisions across the global user base.
@@ -96,7 +96,7 @@ common:
     url: https://azure.microsoft.com/en-us/products/traffic-manager
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/traffic-manager/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
   - type: Authentication
     url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-scenarios
@@ -104,17 +104,17 @@ common:
     url: https://azure.microsoft.com/en-us/pricing/details/traffic-manager/
   - type: SLA
     url: https://azure.microsoft.com/en-us/support/legal/sla/traffic-manager/
-  - type: Status
+  - type: StatusPage
     url: https://status.azure.com/
   - type: Blog
     url: https://azure.microsoft.com/en-us/blog/topics/networking/
   - type: Support
     url: https://azure.microsoft.com/en-us/support/options/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://azure.microsoft.com/en-us/support/legal/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
-  - type: Sign Up
+  - type: SignUp
     url: https://azure.microsoft.com/en-us/free
   - type: Login
     url: https://portal.azure.com
@@ -130,13 +130,13 @@ common:
     url: https://learn.microsoft.com/en-us/java/api/overview/azure/resourcemanager-trafficmanager-readme
   - type: CLI Tools
     url: https://learn.microsoft.com/en-us/cli/azure/network/traffic-manager
-  - type: Change Log
+  - type: ChangeLog
     url: https://azure.microsoft.com/en-us/updates/?product=traffic-manager
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Azure
   - type: GitHub REST API Specs
     url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/trafficmanager
-  - type: Stack Overflow
+  - type: StackOverflow
     url: https://stackoverflow.com/questions/tagged/azure-traffic-manager
   - type: Community
     url: https://learn.microsoft.com/en-us/answers/tags/175/azure-traffic-manager
