@@ -9,7 +9,7 @@ tags:
   - Traffic Distribution
   - Traffic Manager
 created: '2026-03-13'
-modified: '2026-04-28'
+modified: '2026-05-19'
 url: https://azure.microsoft.com/en-us/services/traffic-manager/
 specificationVersion: '0.18'
 apis:
@@ -144,6 +144,9 @@ common:
     url: https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-FAQs
   - type: Training
     url: https://learn.microsoft.com/en-us/training/modules/distribute-load-with-traffic-manager/
+  - name: MCP Server
+    url: https://github.com/Azure/Azure-Resource-Manager-MCP
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
