@@ -90,6 +90,10 @@ apis:
       - type: Reference
         url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies/get-default?view=rest-trafficmanager-2022-04-01
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-traffic-manager-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-traffic-manager-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-azure-traffic-manager-scopes.yml
   - type: Portal
