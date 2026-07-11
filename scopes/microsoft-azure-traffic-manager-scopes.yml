@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/microsoft-azure-traffic-manager-openapi.yml
+schemes:
+- name: azure_auth
+  source: openapi/microsoft-azure-traffic-manager-openapi.yml
+  flows:
+  - flow: implicit
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+  description: Azure Active Directory OAuth 2.0
+scopes:
+- scope: user_impersonation
+  description: impersonate your user account
+  flows:
+  - implicit
+  sources:
+  - openapi/microsoft-azure-traffic-manager-openapi.yml
