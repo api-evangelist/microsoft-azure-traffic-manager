@@ -2,8 +2,11 @@
   "repo": "microsoft-azure-traffic-manager",
   "feeds": [
     {
-      "source": "https://azure.microsoft.com/en-us/blog/topics/networking/feed/",
-      "error": "HTTPError"
+      "source": "https://status.azure.com/feed/",
+      "feed_url": "https://status.azure.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://status.azure.com/",
@@ -14,5 +17,5 @@
     }
   ],
   "post_count": 20,
-  "fetched": "2026-06-27T12:03:07Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
