@@ -1,0 +1,329 @@
+openapi: 3.1.0
+info:
+  title: Azure Traffic Manager REST Endpoints Profiles API
+  description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
+
+    user metrics, and geographic hierarchies via Azure Resource Manager.
+
+    Traffic Manager is a DNS-based traffic load balancer that distributes
+
+    traffic optimally to services across global Azure regions.
+
+    Authentication uses Azure AD OAuth 2.0 bearer tokens.
+
+    '
+  version: '2022-04-01'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager endpoint
+security:
+- azure_auth:
+  - user_impersonation
+tags:
+- name: Profiles
+  description: Traffic Manager profile operations
+paths:
+  /subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficmanagerprofiles:
+    get:
+      tags:
+      - Profiles
+      summary: List Traffic Manager profiles in a subscription
+      operationId: profiles_listBySubscription
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileListResult'
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles:
+    get:
+      tags:
+      - Profiles
+      summary: List Traffic Manager profiles in a resource group
+      operationId: profiles_listByResourceGroup
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileListResult'
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}
+  : get:
+      tags:
+      - Profiles
+      summary: Get a Traffic Manager profile
+      operationId: profiles_get
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    put:
+      tags:
+      - Profiles
+      summary: Create or update a Traffic Manager profile
+      operationId: profiles_createOrUpdate
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - $ref: '#/components/parameters/apiVersion'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    patch:
+      tags:
+      - Profiles
+      summary: Update a Traffic Manager profile
+      operationId: profiles_update
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - $ref: '#/components/parameters/apiVersion'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Profiles
+      summary: Delete a Traffic Manager profile
+      operationId: profiles_delete
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+        '204':
+          description: No Content
+  /providers/Microsoft.Network/checkTrafficManagerNameAvailabilityV2:
+    post:
+      tags:
+      - Profiles
+      summary: Check Traffic Manager relative DNS name availability
+      operationId: profiles_checkTrafficManagerNameAvailabilityV2
+      parameters:
+      - $ref: '#/components/parameters/apiVersion'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    DnsConfig:
+      type: object
+      properties:
+        relativeName:
+          type: string
+        fqdn:
+          type: string
+        ttl:
+          type: integer
+          format: int64
+    MonitorConfig:
+      type: object
+      properties:
+        protocol:
+          type: string
+          enum:
+          - HTTP
+          - HTTPS
+          - TCP
+        port:
+          type: integer
+          format: int64
+        path:
+          type: string
+        intervalInSeconds:
+          type: integer
+          format: int64
+        timeoutInSeconds:
+          type: integer
+          format: int64
+        toleratedNumberOfFailures:
+          type: integer
+          format: int64
+    ProfileListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Profile'
+    Endpoint:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        properties:
+          type: object
+          properties:
+            targetResourceId:
+              type: string
+            target:
+              type: string
+            endpointStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            weight:
+              type: integer
+              format: int64
+            priority:
+              type: integer
+              format: int64
+            endpointLocation:
+              type: string
+            endpointMonitorStatus:
+              type: string
+            geoMapping:
+              type: array
+              items:
+                type: string
+    Profile:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        location:
+          type: string
+        tags:
+          type: object
+          additionalProperties:
+            type: string
+        properties:
+          type: object
+          properties:
+            profileStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            trafficRoutingMethod:
+              type: string
+              enum:
+              - Performance
+              - Priority
+              - Weighted
+              - Geographic
+              - MultiValue
+              - Subnet
+            dnsConfig:
+              $ref: '#/components/schemas/DnsConfig'
+            monitorConfig:
+              $ref: '#/components/schemas/MonitorConfig'
+            endpoints:
+              type: array
+              items:
+                $ref: '#/components/schemas/Endpoint'
+            trafficViewEnrollmentStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            maxReturn:
+              type: integer
+              format: int64
+  parameters:
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
+  securitySchemes:
+    azure_auth:
+      type: oauth2
+      description: Azure Active Directory OAuth 2.0
+      flows:
+        implicit:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+          scopes:
+            user_impersonation: impersonate your user account

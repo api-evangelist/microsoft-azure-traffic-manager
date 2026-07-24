@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: Azure Traffic Manager REST Endpoints HeatMap API
+  description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
+
+    user metrics, and geographic hierarchies via Azure Resource Manager.
+
+    Traffic Manager is a DNS-based traffic load balancer that distributes
+
+    traffic optimally to services across global Azure regions.
+
+    Authentication uses Azure AD OAuth 2.0 bearer tokens.
+
+    '
+  version: '2022-04-01'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager endpoint
+security:
+- azure_auth:
+  - user_impersonation
+tags:
+- name: HeatMap
+  description: Geographic heatmap analytics
+paths:
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/heatMaps/default
+  : get:
+      tags:
+      - HeatMap
+      summary: Get heatmap data for a Traffic Manager profile
+      operationId: heatMap_get
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+components:
+  parameters:
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
+  securitySchemes:
+    azure_auth:
+      type: oauth2
+      description: Azure Active Directory OAuth 2.0
+      flows:
+        implicit:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+          scopes:
+            user_impersonation: impersonate your user account

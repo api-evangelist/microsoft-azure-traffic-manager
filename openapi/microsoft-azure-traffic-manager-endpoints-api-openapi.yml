@@ -1,0 +1,193 @@
+openapi: 3.1.0
+info:
+  title: Azure Traffic Manager REST Endpoints API
+  description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
+
+    user metrics, and geographic hierarchies via Azure Resource Manager.
+
+    Traffic Manager is a DNS-based traffic load balancer that distributes
+
+    traffic optimally to services across global Azure regions.
+
+    Authentication uses Azure AD OAuth 2.0 bearer tokens.
+
+    '
+  version: '2022-04-01'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager endpoint
+security:
+- azure_auth:
+  - user_impersonation
+tags:
+- name: Endpoints
+  description: Endpoint operations within a profile
+paths:
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}
+  : get:
+      tags:
+      - Endpoints
+      summary: Get a Traffic Manager endpoint
+      operationId: endpoints_get
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - name: endpointType
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - ExternalEndpoints
+          - AzureEndpoints
+          - NestedEndpoints
+      - name: endpointName
+        in: path
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Endpoint'
+    put:
+      tags:
+      - Endpoints
+      summary: Create or update an endpoint within a Traffic Manager profile
+      operationId: endpoints_createOrUpdate
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - name: endpointType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: endpointName
+        in: path
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/apiVersion'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Endpoint'
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+    delete:
+      tags:
+      - Endpoints
+      summary: Delete a Traffic Manager endpoint
+      operationId: endpoints_delete
+      parameters:
+      - $ref: '#/components/parameters/subscriptionId'
+      - $ref: '#/components/parameters/resourceGroupName'
+      - $ref: '#/components/parameters/profileName'
+      - name: endpointType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: endpointName
+        in: path
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/apiVersion'
+      responses:
+        '200':
+          description: OK
+        '204':
+          description: No Content
+components:
+  schemas:
+    Endpoint:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        properties:
+          type: object
+          properties:
+            targetResourceId:
+              type: string
+            target:
+              type: string
+            endpointStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            weight:
+              type: integer
+              format: int64
+            priority:
+              type: integer
+              format: int64
+            endpointLocation:
+              type: string
+            endpointMonitorStatus:
+              type: string
+            geoMapping:
+              type: array
+              items:
+                type: string
+  parameters:
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
+  securitySchemes:
+    azure_auth:
+      type: oauth2
+      description: Azure Active Directory OAuth 2.0
+      flows:
+        implicit:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+          scopes:
+            user_impersonation: impersonate your user account
