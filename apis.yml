@@ -1,5 +1,18 @@
 name: Azure Traffic Manager
 description: Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. It supports configurable routing methods including priority, weighted, performance, geographic, multivalue, and subnet routing.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://azure.microsoft.com/svghandler/traffic-manager/
 tags:
   - DNS Load Balancing
@@ -13,83 +26,176 @@ modified: '2026-05-19'
 url: https://azure.microsoft.com/en-us/services/traffic-manager/
 specificationVersion: '0.18'
 apis:
-  - name: Azure Traffic Manager Profiles REST API
-    description: REST API for creating, configuring, and managing Traffic Manager profiles. Profiles define the global DNS-based load balancing configuration including routing method, monitoring settings, and the collection of endpoints participating in the profile.
-    image: https://azure.microsoft.com/svghandler/traffic-manager/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
-    baseURL: https://management.azure.com
-    tags:
-      - Profiles
-      - Routing
-      - Traffic Manager
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
-      - type: Reference
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
-  - name: Azure Traffic Manager Endpoints REST API
-    description: REST API for managing endpoints within a Traffic Manager profile. Supports adding, updating, and removing Azure, external, and nested endpoints that receive traffic according to the profile's routing method and health monitoring configuration.
-    image: https://azure.microsoft.com/svghandler/traffic-manager/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
-    baseURL: https://management.azure.com
-    tags:
-      - Endpoints
-      - Health Monitoring
-      - Traffic Manager
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
-      - type: Reference
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints?view=rest-trafficmanager-2022-04-01
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types
-  - name: Azure Traffic Manager Heatmap REST API
-    description: REST API for retrieving Traffic Manager heatmap data, which provides geographic visualization of DNS query volumes and endpoint selection by region. Useful for analyzing traffic distribution and routing decisions across the global user base.
-    image: https://azure.microsoft.com/svghandler/traffic-manager/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map
-    baseURL: https://management.azure.com
-    tags:
-      - Analytics
-      - Heatmap
-      - Traffic Analytics
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map
-      - type: Reference
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map/get?view=rest-trafficmanager-2022-04-01
-  - name: Azure Traffic Manager User Metrics REST API
-    description: REST API for managing real user measurements (RUM) keys used by Traffic Manager performance routing. User metrics enable Traffic Manager to make more accurate latency-based routing decisions using telemetry from end users.
-    image: https://azure.microsoft.com/svghandler/traffic-manager/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys
-    baseURL: https://management.azure.com
-    tags:
-      - Performance
-      - Real User Measurements
-      - User Metrics
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys
-      - type: Reference
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys?view=rest-trafficmanager-2022-04-01
-  - name: Azure Traffic Manager Geographic Hierarchies REST API
-    description: REST API for retrieving the geographic hierarchy used by Traffic Manager for geographic routing. Returns the supported regions, countries, and subdivisions that can be configured as endpoint geo-mappings within geographic routing profiles.
-    image: https://azure.microsoft.com/svghandler/traffic-manager/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies
-    baseURL: https://management.azure.com
-    tags:
-      - Geographic Hierarchy
-      - Geographic Routing
-      - Regions
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies
-      - type: Reference
-        url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies/get-default?view=rest-trafficmanager-2022-04-01
+- name: Azure Traffic Manager Endpoints REST API
+  description: >-
+    REST API for managing endpoints within a Traffic Manager profile. Supports adding, updating, and removing
+    Azure, external, and nested endpoints that receive traffic according to the profile's routing method
+    and health monitoring configuration.
+  image: https://azure.microsoft.com/svghandler/traffic-manager/
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
+  baseURL: https://management.azure.com
+  tags:
+  - Endpoints
+  - Health Monitoring
+  - Traffic Manager
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types
+- name: Azure Traffic Manager Heatmap REST API
+  description: >-
+    REST API for retrieving Traffic Manager heatmap data, which provides geographic visualization of DNS
+    query volumes and endpoint selection by region. Useful for analyzing traffic distribution and routing
+    decisions across the global user base.
+  image: https://azure.microsoft.com/svghandler/traffic-manager/
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map
+  baseURL: https://management.azure.com
+  tags:
+  - Analytics
+  - Heatmap
+  - Traffic Analytics
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map/get?view=rest-trafficmanager-2022-04-01
+- name: Azure Traffic Manager User Metrics REST API
+  description: >-
+    REST API for managing real user measurements (RUM) keys used by Traffic Manager performance routing.
+    User metrics enable Traffic Manager to make more accurate latency-based routing decisions using telemetry
+    from end users.
+  image: https://azure.microsoft.com/svghandler/traffic-manager/
+  humanURL: >-
+    https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys
+  baseURL: https://management.azure.com
+  tags:
+  - Performance
+  - Real User Measurements
+  - User Metrics
+  properties:
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys?view=rest-trafficmanager-2022-04-01
+- name: Azure Traffic Manager Geographic Hierarchies REST API
+  description: >-
+    REST API for retrieving the geographic hierarchy used by Traffic Manager for geographic routing. Returns
+    the supported regions, countries, and subdivisions that can be configured as endpoint geo-mappings
+    within geographic routing profiles.
+  image: https://azure.microsoft.com/svghandler/traffic-manager/
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies
+  baseURL: https://management.azure.com
+  tags:
+  - Geographic Hierarchy
+  - Geographic Routing
+  - Regions
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies/get-default?view=rest-trafficmanager-2022-04-01
+- aid: microsoft-azure-traffic-manager:microsoft-azure-traffic-manager-endpoints-api
+  name: Azure Traffic Manager Endpoints API
+  description: Endpoint operations within a profile
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  baseURL: https://management.azure.com
+  tags:
+  - Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-traffic-manager-endpoints-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
+- aid: >-
+    microsoft-azure-traffic-manager:microsoft-azure-traffic-manager-geographichierarchies-api
+  name: Azure Traffic Manager GeographicHierarchies API
+  description: Default geographic hierarchy
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  baseURL: https://management.azure.com
+  tags:
+  - GeographicHierarchies
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-traffic-manager-geographichierarchies-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
+- aid: microsoft-azure-traffic-manager:microsoft-azure-traffic-manager-heatmap-api
+  name: Azure Traffic Manager HeatMap API
+  description: Geographic heatmap analytics
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  baseURL: https://management.azure.com
+  tags:
+  - HeatMap
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-traffic-manager-heatmap-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
+- aid: microsoft-azure-traffic-manager:microsoft-azure-traffic-manager-profiles-api
+  name: Azure Traffic Manager Profiles API
+  description: Traffic Manager profile operations
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  baseURL: https://management.azure.com
+  tags:
+  - Profiles
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-traffic-manager-profiles-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
+- aid: microsoft-azure-traffic-manager:microsoft-azure-traffic-manager-usermetrics-api
+  name: Azure Traffic Manager UserMetrics API
+  description: Real User Measurements (RUM) keys
+  humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  baseURL: https://management.azure.com
+  tags:
+  - UserMetrics
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-traffic-manager-usermetrics-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
+  - type: Reference
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/azure-traffic-manager/overview
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-traffic-manager-agentic-access.yml
   - type: DomainSecurity
