@@ -1,0 +1,154 @@
+{
+  "info": {
+    "_postman_id": "a55d1500-2a0c-4ef6-a753-9649b8051076",
+    "name": "Azure Traffic Manager REST Endpoints GeographicHierarchies API",
+    "description": "REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,\nuser metrics, and geographic hierarchies via Azure Resource Manager.\nTraffic Manager is a DNS-based traffic load balancer that distributes\ntraffic optimally to services across global Azure regions.\nAuthentication uses Azure AD OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:10:36.000Z",
+    "updatedAt": "2026-07-28T02:10:36.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a55d1500-2a0c-4ef6-a753-9649b8051076"
+  },
+  "item": [
+    {
+      "name": "providers",
+      "item": [
+        {
+          "name": "Microsoft.Network",
+          "item": [
+            {
+              "name": "trafficManagerGeographicHierarchies",
+              "item": [
+                {
+                  "name": "default",
+                  "item": [
+                    {
+                      "name": "Get the default geographic hierarchy",
+                      "id": "4eeb22a0-80bf-45ce-9976-ae523557209d",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/providers/Microsoft.Network/trafficManagerGeographicHierarchies/default?api-version=2022-04-01",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "providers",
+                            "Microsoft.Network",
+                            "trafficManagerGeographicHierarchies",
+                            "default"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "api-version",
+                              "value": "2022-04-01"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "406d1dbb-574e-4fac-b6e7-d625d90d4265",
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/providers/Microsoft.Network/trafficManagerGeographicHierarchies/default?api-version=2022-04-01",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "providers",
+                                "Microsoft.Network",
+                                "trafficManagerGeographicHierarchies",
+                                "default"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "api-version",
+                                  "value": "2022-04-01"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:10:36.000Z",
+                          "updatedAt": "2026-07-28T02:10:36.000Z",
+                          "uid": "35240-406d1dbb-574e-4fac-b6e7-d625d90d4265"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:10:36.000Z",
+                      "updatedAt": "2026-07-28T02:10:36.000Z",
+                      "uid": "35240-4eeb22a0-80bf-45ce-9976-ae523557209d"
+                    }
+                  ],
+                  "id": "c94c8b41-b80f-47fe-8bdf-0cb144fd20b9",
+                  "createdAt": "2026-07-28T02:10:36.000Z",
+                  "updatedAt": "2026-07-28T02:10:36.000Z",
+                  "uid": "35240-c94c8b41-b80f-47fe-8bdf-0cb144fd20b9"
+                }
+              ],
+              "id": "1aff1b4c-2108-4ca6-b28d-c57d522f9e1d",
+              "createdAt": "2026-07-28T02:10:36.000Z",
+              "updatedAt": "2026-07-28T02:10:36.000Z",
+              "uid": "35240-1aff1b4c-2108-4ca6-b28d-c57d522f9e1d"
+            }
+          ],
+          "id": "d464c316-5662-4b6b-814c-ff72c43c2bd6",
+          "createdAt": "2026-07-28T02:10:36.000Z",
+          "updatedAt": "2026-07-28T02:10:36.000Z",
+          "uid": "35240-d464c316-5662-4b6b-814c-ff72c43c2bd6"
+        }
+      ],
+      "id": "bbec5a8f-8e62-4550-958e-8dd33771304b",
+      "createdAt": "2026-07-28T02:10:36.000Z",
+      "updatedAt": "2026-07-28T02:10:36.000Z",
+      "uid": "35240-bbec5a8f-8e62-4550-958e-8dd33771304b"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}

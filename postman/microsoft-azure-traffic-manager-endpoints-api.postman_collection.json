@@ -1,0 +1,736 @@
+{
+  "info": {
+    "_postman_id": "5d2f01ba-43c6-43e8-bae5-8eb972a3f899",
+    "name": "Azure Traffic Manager REST Endpoints API",
+    "description": "REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,\nuser metrics, and geographic hierarchies via Azure Resource Manager.\nTraffic Manager is a DNS-based traffic load balancer that distributes\ntraffic optimally to services across global Azure regions.\nAuthentication uses Azure AD OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:10:28.000Z",
+    "updatedAt": "2026-07-28T02:10:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5d2f01ba-43c6-43e8-bae5-8eb972a3f899"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "resourceGroups",
+              "item": [
+                {
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.Network",
+                          "item": [
+                            {
+                              "name": "trafficmanagerprofiles",
+                              "item": [
+                                {
+                                  "name": "{profileName}",
+                                  "item": [
+                                    {
+                                      "name": "{endpointType}",
+                                      "item": [
+                                        {
+                                          "name": "{endpointName}",
+                                          "item": [
+                                            {
+                                              "name": "Get a Traffic Manager endpoint",
+                                              "id": "4d4614a3-3e1e-4ab5-8b33-d2f8a3dd55f5",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Network",
+                                                    "trafficmanagerprofiles",
+                                                    ":profileName",
+                                                    ":endpointType",
+                                                    ":endpointName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) ",
+                                                      "key": "api-version",
+                                                      "value": "2022-04-01"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "05e01fd3-f58e-43f9-9972-6851d9618a11",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "c90514d0-d42b-4438-ad66-73de9ecdec5e",
+                                                      "key": "resourceGroupName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "64495974-c9f7-457e-8618-0a26a491f473",
+                                                      "key": "profileName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "f92d1e3f-9606-4f82-9c53-e0b0fba6dbf3",
+                                                      "key": "endpointType",
+                                                      "value": "ExternalEndpoints",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "e4a49011-1c81-477e-a843-62a4aeef8d5e",
+                                                      "key": "endpointName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "30c5d801-34a7-4a26-a907-f3c5c5ecf79a",
+                                                  "name": "OK",
+                                                  "originalRequest": {
+                                                    "method": "GET",
+                                                    "header": [
+                                                      {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        ":endpointType",
+                                                        ":endpointName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        },
+                                                        {
+                                                          "key": "endpointType"
+                                                        },
+                                                        {
+                                                          "key": "endpointName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "json",
+                                                  "header": [
+                                                    {
+                                                      "key": "Content-Type",
+                                                      "value": "application/json"
+                                                    }
+                                                  ],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"properties\": {\n    \"targetResourceId\": \"<string>\",\n    \"target\": \"<string>\",\n    \"endpointStatus\": \"Enabled\",\n    \"weight\": \"<long>\",\n    \"priority\": \"<long>\",\n    \"endpointLocation\": \"<string>\",\n    \"endpointMonitorStatus\": \"<string>\",\n    \"geoMapping\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                                  "uid": "35240-30c5d801-34a7-4a26-a907-f3c5c5ecf79a"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T02:10:28.000Z",
+                                              "updatedAt": "2026-07-28T02:10:28.000Z",
+                                              "uid": "35240-4d4614a3-3e1e-4ab5-8b33-d2f8a3dd55f5"
+                                            },
+                                            {
+                                              "name": "Create or update an endpoint within a Traffic Manager profile",
+                                              "id": "66d306d3-f121-4d2f-ab4b-898c5f038aca",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "PUT",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"properties\": {\n    \"targetResourceId\": \"<string>\",\n    \"target\": \"<string>\",\n    \"endpointStatus\": \"Enabled\",\n    \"weight\": \"<long>\",\n    \"priority\": \"<long>\",\n    \"endpointLocation\": \"<string>\",\n    \"endpointMonitorStatus\": \"<string>\",\n    \"geoMapping\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Network",
+                                                    "trafficmanagerprofiles",
+                                                    ":profileName",
+                                                    ":endpointType",
+                                                    ":endpointName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) ",
+                                                      "key": "api-version",
+                                                      "value": "2022-04-01"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "4b9a0a36-93b0-46d6-88f0-24d0058f7bd2",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "7018ced3-c529-478e-a243-4c7c2d99489c",
+                                                      "key": "resourceGroupName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "bb466d39-5dba-4653-bb1f-6bea3874e38d",
+                                                      "key": "profileName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "e690e876-5f71-4d66-afbd-269b02c31747",
+                                                      "key": "endpointType",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "6e655ba6-0716-470d-b39e-9f63ee6c1cb6",
+                                                      "key": "endpointName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "6982592c-885c-4376-9b24-487cbc653435",
+                                                  "name": "OK",
+                                                  "originalRequest": {
+                                                    "method": "PUT",
+                                                    "header": [
+                                                      {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "body": {
+                                                      "mode": "raw",
+                                                      "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"properties\": {\n    \"targetResourceId\": \"<string>\",\n    \"target\": \"<string>\",\n    \"endpointStatus\": \"Enabled\",\n    \"weight\": \"<long>\",\n    \"priority\": \"<long>\",\n    \"endpointLocation\": \"<string>\",\n    \"endpointMonitorStatus\": \"<string>\",\n    \"geoMapping\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                                      "options": {
+                                                        "raw": {
+                                                          "headerFamily": "json",
+                                                          "language": "json"
+                                                        }
+                                                      }
+                                                    },
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        ":endpointType",
+                                                        ":endpointName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        },
+                                                        {
+                                                          "key": "endpointType"
+                                                        },
+                                                        {
+                                                          "key": "endpointName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                                  "uid": "35240-6982592c-885c-4376-9b24-487cbc653435"
+                                                },
+                                                {
+                                                  "id": "59206044-4263-40d5-95c3-289bcc49a4f6",
+                                                  "name": "Created",
+                                                  "originalRequest": {
+                                                    "method": "PUT",
+                                                    "header": [
+                                                      {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                      },
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "body": {
+                                                      "mode": "raw",
+                                                      "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"properties\": {\n    \"targetResourceId\": \"<string>\",\n    \"target\": \"<string>\",\n    \"endpointStatus\": \"Enabled\",\n    \"weight\": \"<long>\",\n    \"priority\": \"<long>\",\n    \"endpointLocation\": \"<string>\",\n    \"endpointMonitorStatus\": \"<string>\",\n    \"geoMapping\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                                      "options": {
+                                                        "raw": {
+                                                          "headerFamily": "json",
+                                                          "language": "json"
+                                                        }
+                                                      }
+                                                    },
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        ":endpointType",
+                                                        ":endpointName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        },
+                                                        {
+                                                          "key": "endpointType"
+                                                        },
+                                                        {
+                                                          "key": "endpointName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "Created",
+                                                  "code": 201,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                                  "uid": "35240-59206044-4263-40d5-95c3-289bcc49a4f6"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T02:10:28.000Z",
+                                              "updatedAt": "2026-07-28T02:10:28.000Z",
+                                              "uid": "35240-66d306d3-f121-4d2f-ab4b-898c5f038aca"
+                                            },
+                                            {
+                                              "name": "Delete a Traffic Manager endpoint",
+                                              "id": "c283deec-bd7c-4af3-b2d5-38cbe463a280",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "DELETE",
+                                                "header": [],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Network",
+                                                    "trafficmanagerprofiles",
+                                                    ":profileName",
+                                                    ":endpointType",
+                                                    ":endpointName"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) ",
+                                                      "key": "api-version",
+                                                      "value": "2022-04-01"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "1e3c5e75-c86f-4b84-8c7f-243c64c27147",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "3c229d25-bbf4-48b8-9db1-750905a63952",
+                                                      "key": "resourceGroupName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "4fc3110e-2fa5-4021-8ab2-79a63b71829c",
+                                                      "key": "profileName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "ac9a2b75-a1a8-4ca6-9847-14639bb8d1ff",
+                                                      "key": "endpointType",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "8a91007d-edf3-45ef-93e9-ea83947f172a",
+                                                      "key": "endpointName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "fbb25fa6-80b6-4e34-a8fe-f10b124cabb9",
+                                                  "name": "OK",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        ":endpointType",
+                                                        ":endpointName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        },
+                                                        {
+                                                          "key": "endpointType"
+                                                        },
+                                                        {
+                                                          "key": "endpointName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                                  "uid": "35240-fbb25fa6-80b6-4e34-a8fe-f10b124cabb9"
+                                                },
+                                                {
+                                                  "id": "81b81e06-f00d-4400-a13f-b21e43df6d9d",
+                                                  "name": "No Content",
+                                                  "originalRequest": {
+                                                    "method": "DELETE",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        ":endpointType",
+                                                        ":endpointName"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        },
+                                                        {
+                                                          "key": "endpointType"
+                                                        },
+                                                        {
+                                                          "key": "endpointName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "No Content",
+                                                  "code": 204,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                                  "uid": "35240-81b81e06-f00d-4400-a13f-b21e43df6d9d"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T02:10:28.000Z",
+                                              "updatedAt": "2026-07-28T02:10:28.000Z",
+                                              "uid": "35240-c283deec-bd7c-4af3-b2d5-38cbe463a280"
+                                            }
+                                          ],
+                                          "id": "3dbf24dd-268f-4006-b0b7-7dcdf2800cb9",
+                                          "createdAt": "2026-07-28T02:10:28.000Z",
+                                          "updatedAt": "2026-07-28T02:10:28.000Z",
+                                          "uid": "35240-3dbf24dd-268f-4006-b0b7-7dcdf2800cb9"
+                                        }
+                                      ],
+                                      "id": "000b2e8a-569e-46e1-8ed4-8b1e10dfdd37",
+                                      "createdAt": "2026-07-28T02:10:28.000Z",
+                                      "updatedAt": "2026-07-28T02:10:28.000Z",
+                                      "uid": "35240-000b2e8a-569e-46e1-8ed4-8b1e10dfdd37"
+                                    }
+                                  ],
+                                  "id": "f9db6a64-309f-4464-96b5-550e3b668c68",
+                                  "createdAt": "2026-07-28T02:10:28.000Z",
+                                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                                  "uid": "35240-f9db6a64-309f-4464-96b5-550e3b668c68"
+                                }
+                              ],
+                              "id": "0680d9f4-e8e3-40ef-ae4d-29394306e1df",
+                              "createdAt": "2026-07-28T02:10:28.000Z",
+                              "updatedAt": "2026-07-28T02:10:28.000Z",
+                              "uid": "35240-0680d9f4-e8e3-40ef-ae4d-29394306e1df"
+                            }
+                          ],
+                          "id": "2659d3b9-01cb-456b-90cb-654313b43e6f",
+                          "createdAt": "2026-07-28T02:10:28.000Z",
+                          "updatedAt": "2026-07-28T02:10:28.000Z",
+                          "uid": "35240-2659d3b9-01cb-456b-90cb-654313b43e6f"
+                        }
+                      ],
+                      "id": "a044b77c-65cf-46e9-9b72-23fdbadb516c",
+                      "createdAt": "2026-07-28T02:10:28.000Z",
+                      "updatedAt": "2026-07-28T02:10:28.000Z",
+                      "uid": "35240-a044b77c-65cf-46e9-9b72-23fdbadb516c"
+                    }
+                  ],
+                  "id": "8c6f45f6-b3cf-45c9-b7aa-59e3b18a5442",
+                  "createdAt": "2026-07-28T02:10:28.000Z",
+                  "updatedAt": "2026-07-28T02:10:28.000Z",
+                  "uid": "35240-8c6f45f6-b3cf-45c9-b7aa-59e3b18a5442"
+                }
+              ],
+              "id": "12ba161e-f81f-48dd-8dc4-e208272e350a",
+              "createdAt": "2026-07-28T02:10:28.000Z",
+              "updatedAt": "2026-07-28T02:10:28.000Z",
+              "uid": "35240-12ba161e-f81f-48dd-8dc4-e208272e350a"
+            }
+          ],
+          "id": "d8a0868b-9db1-4f7a-a347-00baa101dbcd",
+          "createdAt": "2026-07-28T02:10:28.000Z",
+          "updatedAt": "2026-07-28T02:10:28.000Z",
+          "uid": "35240-d8a0868b-9db1-4f7a-a347-00baa101dbcd"
+        }
+      ],
+      "id": "5ce9bfac-9254-4c4d-bd5b-f6c2fe5e1028",
+      "createdAt": "2026-07-28T02:10:28.000Z",
+      "updatedAt": "2026-07-28T02:10:28.000Z",
+      "uid": "35240-5ce9bfac-9254-4c4d-bd5b-f6c2fe5e1028"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}

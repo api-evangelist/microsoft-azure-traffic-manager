@@ -1,0 +1,429 @@
+{
+  "info": {
+    "_postman_id": "d34da914-76e7-431d-b6f5-15d111d19bd5",
+    "name": "Azure Traffic Manager REST Endpoints UserMetrics API",
+    "description": "REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,\nuser metrics, and geographic hierarchies via Azure Resource Manager.\nTraffic Manager is a DNS-based traffic load balancer that distributes\ntraffic optimally to services across global Azure regions.\nAuthentication uses Azure AD OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:10:40.000Z",
+    "updatedAt": "2026-07-28T02:10:40.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d34da914-76e7-431d-b6f5-15d111d19bd5"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "providers",
+              "item": [
+                {
+                  "name": "Microsoft.Network",
+                  "item": [
+                    {
+                      "name": "trafficManagerUserMetricsKeys",
+                      "item": [
+                        {
+                          "name": "default",
+                          "item": [
+                            {
+                              "name": "Get the user metrics key",
+                              "id": "f0924471-3577-48ac-816e-dbcd53d263cf",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "subscriptions",
+                                    ":subscriptionId",
+                                    "providers",
+                                    "Microsoft.Network",
+                                    "trafficManagerUserMetricsKeys",
+                                    "default"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "api-version",
+                                      "value": "2022-04-01"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "f7a6f119-8d0b-48b8-94c1-088a0c3f9998",
+                                      "key": "subscriptionId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                }
+                              },
+                              "response": [
+                                {
+                                  "id": "842033cc-9ee5-4218-a0d5-3bba71c59c53",
+                                  "name": "OK",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "subscriptions",
+                                        ":subscriptionId",
+                                        "providers",
+                                        "Microsoft.Network",
+                                        "trafficManagerUserMetricsKeys",
+                                        "default"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "(Required) ",
+                                          "key": "api-version",
+                                          "value": "2022-04-01"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "subscriptionId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T02:10:40.000Z",
+                                  "updatedAt": "2026-07-28T02:10:40.000Z",
+                                  "uid": "35240-842033cc-9ee5-4218-a0d5-3bba71c59c53"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T02:10:40.000Z",
+                              "updatedAt": "2026-07-28T02:10:40.000Z",
+                              "uid": "35240-f0924471-3577-48ac-816e-dbcd53d263cf"
+                            },
+                            {
+                              "name": "Create or update the user metrics key",
+                              "id": "903d515b-0708-45d8-8b9e-53bc2f6c356b",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "PUT",
+                                "header": [],
+                                "url": {
+                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "subscriptions",
+                                    ":subscriptionId",
+                                    "providers",
+                                    "Microsoft.Network",
+                                    "trafficManagerUserMetricsKeys",
+                                    "default"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "api-version",
+                                      "value": "2022-04-01"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "80477cda-5084-431c-81ce-071541558a2d",
+                                      "key": "subscriptionId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                }
+                              },
+                              "response": [
+                                {
+                                  "id": "4290310f-0d22-4be3-91a6-e32a306053ae",
+                                  "name": "OK",
+                                  "originalRequest": {
+                                    "method": "PUT",
+                                    "header": [
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "subscriptions",
+                                        ":subscriptionId",
+                                        "providers",
+                                        "Microsoft.Network",
+                                        "trafficManagerUserMetricsKeys",
+                                        "default"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "(Required) ",
+                                          "key": "api-version",
+                                          "value": "2022-04-01"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "subscriptionId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T02:10:40.000Z",
+                                  "updatedAt": "2026-07-28T02:10:40.000Z",
+                                  "uid": "35240-4290310f-0d22-4be3-91a6-e32a306053ae"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T02:10:40.000Z",
+                              "updatedAt": "2026-07-28T02:10:40.000Z",
+                              "uid": "35240-903d515b-0708-45d8-8b9e-53bc2f6c356b"
+                            },
+                            {
+                              "name": "Delete the user metrics key",
+                              "id": "cbdc8408-d947-4738-83f9-64c4e2e0a9a3",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "subscriptions",
+                                    ":subscriptionId",
+                                    "providers",
+                                    "Microsoft.Network",
+                                    "trafficManagerUserMetricsKeys",
+                                    "default"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "api-version",
+                                      "value": "2022-04-01"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "9e66ae2f-b7b6-45a9-864b-ac74e6dfd5de",
+                                      "key": "subscriptionId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                }
+                              },
+                              "response": [
+                                {
+                                  "id": "b00e72b8-1205-435f-9c11-92ee85dca410",
+                                  "name": "OK",
+                                  "originalRequest": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "subscriptions",
+                                        ":subscriptionId",
+                                        "providers",
+                                        "Microsoft.Network",
+                                        "trafficManagerUserMetricsKeys",
+                                        "default"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "(Required) ",
+                                          "key": "api-version",
+                                          "value": "2022-04-01"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "subscriptionId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T02:10:40.000Z",
+                                  "updatedAt": "2026-07-28T02:10:40.000Z",
+                                  "uid": "35240-b00e72b8-1205-435f-9c11-92ee85dca410"
+                                },
+                                {
+                                  "id": "b8405199-f175-49bb-a1d1-205ef1a4467a",
+                                  "name": "No Content",
+                                  "originalRequest": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default?api-version=2022-04-01",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "subscriptions",
+                                        ":subscriptionId",
+                                        "providers",
+                                        "Microsoft.Network",
+                                        "trafficManagerUserMetricsKeys",
+                                        "default"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "(Required) ",
+                                          "key": "api-version",
+                                          "value": "2022-04-01"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "subscriptionId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "No Content",
+                                  "code": 204,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T02:10:40.000Z",
+                                  "updatedAt": "2026-07-28T02:10:40.000Z",
+                                  "uid": "35240-b8405199-f175-49bb-a1d1-205ef1a4467a"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T02:10:40.000Z",
+                              "updatedAt": "2026-07-28T02:10:40.000Z",
+                              "uid": "35240-cbdc8408-d947-4738-83f9-64c4e2e0a9a3"
+                            }
+                          ],
+                          "id": "b5210279-6faa-4b1d-8934-f8d2d5aee906",
+                          "createdAt": "2026-07-28T02:10:40.000Z",
+                          "updatedAt": "2026-07-28T02:10:40.000Z",
+                          "uid": "35240-b5210279-6faa-4b1d-8934-f8d2d5aee906"
+                        }
+                      ],
+                      "id": "0c954b16-a9eb-4cf2-8dab-1aa8a71ade87",
+                      "createdAt": "2026-07-28T02:10:40.000Z",
+                      "updatedAt": "2026-07-28T02:10:40.000Z",
+                      "uid": "35240-0c954b16-a9eb-4cf2-8dab-1aa8a71ade87"
+                    }
+                  ],
+                  "id": "3d54db17-50d4-4872-baa6-20196d502218",
+                  "createdAt": "2026-07-28T02:10:40.000Z",
+                  "updatedAt": "2026-07-28T02:10:40.000Z",
+                  "uid": "35240-3d54db17-50d4-4872-baa6-20196d502218"
+                }
+              ],
+              "id": "305bee95-6c78-48ff-b2c9-1cd7381d04ce",
+              "createdAt": "2026-07-28T02:10:40.000Z",
+              "updatedAt": "2026-07-28T02:10:40.000Z",
+              "uid": "35240-305bee95-6c78-48ff-b2c9-1cd7381d04ce"
+            }
+          ],
+          "id": "088b2582-97ed-412b-9d50-8df236f09846",
+          "createdAt": "2026-07-28T02:10:40.000Z",
+          "updatedAt": "2026-07-28T02:10:40.000Z",
+          "uid": "35240-088b2582-97ed-412b-9d50-8df236f09846"
+        }
+      ],
+      "id": "4abc4508-c2a7-40a3-a1aa-75cb14e32594",
+      "createdAt": "2026-07-28T02:10:40.000Z",
+      "updatedAt": "2026-07-28T02:10:40.000Z",
+      "uid": "35240-4abc4508-c2a7-40a3-a1aa-75cb14e32594"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}

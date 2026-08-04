@@ -1,0 +1,22 @@
+{
+  "provider": "microsoft-azure-traffic-manager",
+  "sources": [
+    "microsoft-azure-traffic-manager-endpoints-api-openapi.yml",
+    "microsoft-azure-traffic-manager-geographichierarchies-api-openapi.yml",
+    "microsoft-azure-traffic-manager-heatmap-api-openapi.yml",
+    "microsoft-azure-traffic-manager-profiles-api-openapi.yml",
+    "microsoft-azure-traffic-manager-usermetrics-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-azure-traffic-manager-endpoints-api-openapi.yml",
+    "microsoft-azure-traffic-manager-geographichierarchies-api-openapi.yml",
+    "microsoft-azure-traffic-manager-heatmap-api-openapi.yml",
+    "microsoft-azure-traffic-manager-profiles-api-openapi.yml",
+    "microsoft-azure-traffic-manager-usermetrics-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,251 @@
+{
+  "info": {
+    "_postman_id": "50fc8ca1-a204-4b9b-ad3e-af8a5275ba19",
+    "name": "Azure Traffic Manager REST Endpoints HeatMap API",
+    "description": "REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,\nuser metrics, and geographic hierarchies via Azure Resource Manager.\nTraffic Manager is a DNS-based traffic load balancer that distributes\ntraffic optimally to services across global Azure regions.\nAuthentication uses Azure AD OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:10:38.000Z",
+    "updatedAt": "2026-07-28T02:10:38.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-50fc8ca1-a204-4b9b-ad3e-af8a5275ba19"
+  },
+  "item": [
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "{subscriptionId}",
+          "item": [
+            {
+              "name": "resourceGroups",
+              "item": [
+                {
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.Network",
+                          "item": [
+                            {
+                              "name": "trafficmanagerprofiles",
+                              "item": [
+                                {
+                                  "name": "{profileName}",
+                                  "item": [
+                                    {
+                                      "name": "heatMaps",
+                                      "item": [
+                                        {
+                                          "name": "default",
+                                          "item": [
+                                            {
+                                              "name": "Get heatmap data for a Traffic Manager profile",
+                                              "id": "fdf3afd7-b156-4a7d-9537-64ba2db62cb7",
+                                              "protocolProfileBehavior": {
+                                                "disableBodyPruning": true
+                                              },
+                                              "request": {
+                                                "method": "GET",
+                                                "header": [],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/heatMaps/default?api-version=2022-04-01",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "subscriptions",
+                                                    ":subscriptionId",
+                                                    "resourceGroups",
+                                                    ":resourceGroupName",
+                                                    "providers",
+                                                    "Microsoft.Network",
+                                                    "trafficmanagerprofiles",
+                                                    ":profileName",
+                                                    "heatMaps",
+                                                    "default"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "description": "(Required) ",
+                                                      "key": "api-version",
+                                                      "value": "2022-04-01"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "id": "57006553-ecff-4fba-8da1-64817cff3388",
+                                                      "key": "subscriptionId",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "10b2614a-11ed-48d8-aa12-9cfa04b52ba1",
+                                                      "key": "resourceGroupName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    },
+                                                    {
+                                                      "id": "5ef2ac3d-bd5e-476f-b5d6-fdcb95c88a52",
+                                                      "key": "profileName",
+                                                      "value": "<string>",
+                                                      "description": "(Required) "
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "response": [
+                                                {
+                                                  "id": "92b236dc-5aa6-45e8-870a-7e9e687db6e2",
+                                                  "name": "OK",
+                                                  "originalRequest": {
+                                                    "method": "GET",
+                                                    "header": [
+                                                      {
+                                                        "description": "Added as a part of security scheme: oauth2",
+                                                        "key": "Authorization",
+                                                        "value": "<token>"
+                                                      }
+                                                    ],
+                                                    "url": {
+                                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/heatMaps/default?api-version=2022-04-01",
+                                                      "host": [
+                                                        "{{baseUrl}}"
+                                                      ],
+                                                      "path": [
+                                                        "subscriptions",
+                                                        ":subscriptionId",
+                                                        "resourceGroups",
+                                                        ":resourceGroupName",
+                                                        "providers",
+                                                        "Microsoft.Network",
+                                                        "trafficmanagerprofiles",
+                                                        ":profileName",
+                                                        "heatMaps",
+                                                        "default"
+                                                      ],
+                                                      "query": [
+                                                        {
+                                                          "description": "(Required) ",
+                                                          "key": "api-version",
+                                                          "value": "2022-04-01"
+                                                        }
+                                                      ],
+                                                      "variable": [
+                                                        {
+                                                          "key": "subscriptionId"
+                                                        },
+                                                        {
+                                                          "key": "resourceGroupName"
+                                                        },
+                                                        {
+                                                          "key": "profileName"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "status": "OK",
+                                                  "code": 200,
+                                                  "_postman_previewlanguage": "text",
+                                                  "header": [],
+                                                  "cookie": [],
+                                                  "responseTime": null,
+                                                  "body": null,
+                                                  "createdAt": "2026-07-28T02:10:38.000Z",
+                                                  "updatedAt": "2026-07-28T02:10:38.000Z",
+                                                  "uid": "35240-92b236dc-5aa6-45e8-870a-7e9e687db6e2"
+                                                }
+                                              ],
+                                              "createdAt": "2026-07-28T02:10:38.000Z",
+                                              "updatedAt": "2026-07-28T02:10:38.000Z",
+                                              "uid": "35240-fdf3afd7-b156-4a7d-9537-64ba2db62cb7"
+                                            }
+                                          ],
+                                          "id": "84706655-58aa-498e-97ad-e129e253f1cc",
+                                          "createdAt": "2026-07-28T02:10:38.000Z",
+                                          "updatedAt": "2026-07-28T02:10:38.000Z",
+                                          "uid": "35240-84706655-58aa-498e-97ad-e129e253f1cc"
+                                        }
+                                      ],
+                                      "id": "a2eec056-0425-4529-b3cc-bf266f2fcb4d",
+                                      "createdAt": "2026-07-28T02:10:38.000Z",
+                                      "updatedAt": "2026-07-28T02:10:38.000Z",
+                                      "uid": "35240-a2eec056-0425-4529-b3cc-bf266f2fcb4d"
+                                    }
+                                  ],
+                                  "id": "0a836826-c872-4c27-a35e-2340c3be5f0e",
+                                  "createdAt": "2026-07-28T02:10:38.000Z",
+                                  "updatedAt": "2026-07-28T02:10:38.000Z",
+                                  "uid": "35240-0a836826-c872-4c27-a35e-2340c3be5f0e"
+                                }
+                              ],
+                              "id": "b12babb2-4dd8-4c58-80c3-981126b40b68",
+                              "createdAt": "2026-07-28T02:10:38.000Z",
+                              "updatedAt": "2026-07-28T02:10:38.000Z",
+                              "uid": "35240-b12babb2-4dd8-4c58-80c3-981126b40b68"
+                            }
+                          ],
+                          "id": "2bff0e7b-393e-4f85-b534-a2a544a9a4fe",
+                          "createdAt": "2026-07-28T02:10:38.000Z",
+                          "updatedAt": "2026-07-28T02:10:38.000Z",
+                          "uid": "35240-2bff0e7b-393e-4f85-b534-a2a544a9a4fe"
+                        }
+                      ],
+                      "id": "32577019-befa-4336-ac0d-0b28c3673113",
+                      "createdAt": "2026-07-28T02:10:38.000Z",
+                      "updatedAt": "2026-07-28T02:10:38.000Z",
+                      "uid": "35240-32577019-befa-4336-ac0d-0b28c3673113"
+                    }
+                  ],
+                  "id": "8dfdb3bc-ebfb-4e8c-96a5-deda13242f2f",
+                  "createdAt": "2026-07-28T02:10:38.000Z",
+                  "updatedAt": "2026-07-28T02:10:38.000Z",
+                  "uid": "35240-8dfdb3bc-ebfb-4e8c-96a5-deda13242f2f"
+                }
+              ],
+              "id": "f10c1f43-2a38-44a0-95f8-5944f343afe2",
+              "createdAt": "2026-07-28T02:10:38.000Z",
+              "updatedAt": "2026-07-28T02:10:38.000Z",
+              "uid": "35240-f10c1f43-2a38-44a0-95f8-5944f343afe2"
+            }
+          ],
+          "id": "f2e0f573-61cf-4f1c-9e03-c4c099fb7898",
+          "createdAt": "2026-07-28T02:10:38.000Z",
+          "updatedAt": "2026-07-28T02:10:38.000Z",
+          "uid": "35240-f2e0f573-61cf-4f1c-9e03-c4c099fb7898"
+        }
+      ],
+      "id": "36c718e8-04da-4084-9d4e-23585f0b18de",
+      "createdAt": "2026-07-28T02:10:38.000Z",
+      "updatedAt": "2026-07-28T02:10:38.000Z",
+      "uid": "35240-36c718e8-04da-4084-9d4e-23585f0b18de"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
+    }
+  ]
+}
