@@ -1,0 +1,1155 @@
+{
+  "item": [
+    {
+      "id": "1abc0226-8231-4112-a973-b0fc2523d3a5",
+      "name": "Profiles",
+      "description": {
+        "content": "Traffic Manager profile operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e3cb8ab3-b192-4fb9-86ba-1e72b21945c7",
+          "name": "List Traffic Manager profiles in a subscription",
+          "request": {
+            "name": "List Traffic Manager profiles in a subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "001e0952-5fae-40b8-b517-223e02e508ae",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"properties\": {\n        \"profileStatus\": \"Disabled\",\n        \"trafficRoutingMethod\": \"Performance\",\n        \"dnsConfig\": {\n          \"relativeName\": \"string\",\n          \"fqdn\": \"string\",\n          \"ttl\": 4081\n        },\n        \"monitorConfig\": {\n          \"protocol\": \"HTTP\",\n          \"port\": 621,\n          \"path\": \"string\",\n          \"intervalInSeconds\": 7004,\n          \"timeoutInSeconds\": 7630,\n          \"toleratedNumberOfFailures\": 878\n        },\n        \"endpoints\": [\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Disabled\",\n              \"weight\": 6883,\n              \"priority\": 6533,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          },\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Enabled\",\n              \"weight\": 248,\n              \"priority\": 1908,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          }\n        ],\n        \"trafficViewEnrollmentStatus\": \"Enabled\",\n        \"maxReturn\": 3756\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {\n        \"profileStatus\": \"Enabled\",\n        \"trafficRoutingMethod\": \"Performance\",\n        \"dnsConfig\": {\n          \"relativeName\": \"string\",\n          \"fqdn\": \"string\",\n          \"ttl\": 8090\n        },\n        \"monitorConfig\": {\n          \"protocol\": \"TCP\",\n          \"port\": 6527,\n          \"path\": \"string\",\n          \"intervalInSeconds\": 4776,\n          \"timeoutInSeconds\": 790,\n          \"toleratedNumberOfFailures\": 284\n        },\n        \"endpoints\": [\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Disabled\",\n              \"weight\": 5163,\n              \"priority\": 5,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          },\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Enabled\",\n              \"weight\": 1671,\n              \"priority\": 4351,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          }\n        ],\n        \"trafficViewEnrollmentStatus\": \"Disabled\",\n        \"maxReturn\": 3881\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f2ac32cb-14ea-4611-8281-21059383b66f",
+          "name": "List Traffic Manager profiles in a resource group",
+          "request": {
+            "name": "List Traffic Manager profiles in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59deb997-cb7a-4a53-b057-0aab633b8edc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"properties\": {\n        \"profileStatus\": \"Disabled\",\n        \"trafficRoutingMethod\": \"Performance\",\n        \"dnsConfig\": {\n          \"relativeName\": \"string\",\n          \"fqdn\": \"string\",\n          \"ttl\": 4081\n        },\n        \"monitorConfig\": {\n          \"protocol\": \"HTTP\",\n          \"port\": 621,\n          \"path\": \"string\",\n          \"intervalInSeconds\": 7004,\n          \"timeoutInSeconds\": 7630,\n          \"toleratedNumberOfFailures\": 878\n        },\n        \"endpoints\": [\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Disabled\",\n              \"weight\": 6883,\n              \"priority\": 6533,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          },\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Enabled\",\n              \"weight\": 248,\n              \"priority\": 1908,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          }\n        ],\n        \"trafficViewEnrollmentStatus\": \"Enabled\",\n        \"maxReturn\": 3756\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {\n        \"profileStatus\": \"Enabled\",\n        \"trafficRoutingMethod\": \"Performance\",\n        \"dnsConfig\": {\n          \"relativeName\": \"string\",\n          \"fqdn\": \"string\",\n          \"ttl\": 8090\n        },\n        \"monitorConfig\": {\n          \"protocol\": \"TCP\",\n          \"port\": 6527,\n          \"path\": \"string\",\n          \"intervalInSeconds\": 4776,\n          \"timeoutInSeconds\": 790,\n          \"toleratedNumberOfFailures\": 284\n        },\n        \"endpoints\": [\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Disabled\",\n              \"weight\": 5163,\n              \"priority\": 5,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          },\n          {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"properties\": {\n              \"targetResourceId\": \"string\",\n              \"target\": \"string\",\n              \"endpointStatus\": \"Enabled\",\n              \"weight\": 1671,\n              \"priority\": 4351,\n              \"endpointLocation\": \"string\",\n              \"endpointMonitorStatus\": \"string\",\n              \"geoMapping\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ]\n            }\n          }\n        ],\n        \"trafficViewEnrollmentStatus\": \"Disabled\",\n        \"maxReturn\": 3881\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ca16eb9-bc2d-46cb-9faf-d574a7745052",
+          "name": "Get a Traffic Manager profile",
+          "request": {
+            "name": "Get a Traffic Manager profile",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles",
+                ":profileName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "profileName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c5dfe35-a821-4849-9fba-00af9c2a33e9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"Enabled\",\n    \"trafficRoutingMethod\": \"Geographic\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 2893\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"HTTP\",\n      \"port\": 184,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 3319,\n      \"timeoutInSeconds\": 5633,\n      \"toleratedNumberOfFailures\": 1485\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 6395,\n          \"priority\": 2190,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Disabled\",\n          \"weight\": 2338,\n          \"priority\": 7238,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"Enabled\",\n    \"maxReturn\": 5795\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6b007014-835d-4923-b5e1-7bf474fab60f",
+          "name": "Create or update a Traffic Manager profile",
+          "request": {
+            "name": "Create or update a Traffic Manager profile",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles",
+                ":profileName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "profileName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"<string>\",\n    \"trafficRoutingMethod\": \"<string>\",\n    \"dnsConfig\": {\n      \"relativeName\": \"<string>\",\n      \"fqdn\": \"<string>\",\n      \"ttl\": \"<long>\"\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"<string>\",\n      \"port\": \"<long>\",\n      \"path\": \"<string>\",\n      \"intervalInSeconds\": \"<long>\",\n      \"timeoutInSeconds\": \"<long>\",\n      \"toleratedNumberOfFailures\": \"<long>\"\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"properties\": {\n          \"targetResourceId\": \"<string>\",\n          \"target\": \"<string>\",\n          \"endpointStatus\": \"<string>\",\n          \"weight\": \"<long>\",\n          \"priority\": \"<long>\",\n          \"endpointLocation\": \"<string>\",\n          \"endpointMonitorStatus\": \"<string>\",\n          \"geoMapping\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"properties\": {\n          \"targetResourceId\": \"<string>\",\n          \"target\": \"<string>\",\n          \"endpointStatus\": \"<string>\",\n          \"weight\": \"<long>\",\n          \"priority\": \"<long>\",\n          \"endpointLocation\": \"<string>\",\n          \"endpointMonitorStatus\": \"<string>\",\n          \"geoMapping\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"<string>\",\n    \"maxReturn\": \"<long>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "426205d9-557e-41fe-81d9-61151ad4b38d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"<string>\",\n    \"trafficRoutingMethod\": \"<string>\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 8434\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"TCP\",\n      \"port\": 5966,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 9147,\n      \"timeoutInSeconds\": 9775,\n      \"toleratedNumberOfFailures\": 2010\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1604,\n          \"priority\": 7915,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1200,\n          \"priority\": 6272,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"<string>\",\n    \"maxReturn\": \"<long>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"Enabled\",\n    \"trafficRoutingMethod\": \"Geographic\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 2893\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"HTTP\",\n      \"port\": 184,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 3319,\n      \"timeoutInSeconds\": 5633,\n      \"toleratedNumberOfFailures\": 1485\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 6395,\n          \"priority\": 2190,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Disabled\",\n          \"weight\": 2338,\n          \"priority\": 7238,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"Enabled\",\n    \"maxReturn\": 5795\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e54cc299-2115-4dd7-af8c-9cbc76128ce0",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"<string>\",\n    \"trafficRoutingMethod\": \"<string>\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 8434\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"TCP\",\n      \"port\": 5966,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 9147,\n      \"timeoutInSeconds\": 9775,\n      \"toleratedNumberOfFailures\": 2010\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1604,\n          \"priority\": 7915,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1200,\n          \"priority\": 6272,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"<string>\",\n    \"maxReturn\": \"<long>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"Enabled\",\n    \"trafficRoutingMethod\": \"Geographic\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 2893\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"HTTP\",\n      \"port\": 184,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 3319,\n      \"timeoutInSeconds\": 5633,\n      \"toleratedNumberOfFailures\": 1485\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 6395,\n          \"priority\": 2190,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Disabled\",\n          \"weight\": 2338,\n          \"priority\": 7238,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"Enabled\",\n    \"maxReturn\": 5795\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b459529c-4805-46bb-9326-f3662ce6dd89",
+          "name": "Update a Traffic Manager profile",
+          "request": {
+            "name": "Update a Traffic Manager profile",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles",
+                ":profileName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "profileName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"<string>\",\n    \"trafficRoutingMethod\": \"<string>\",\n    \"dnsConfig\": {\n      \"relativeName\": \"<string>\",\n      \"fqdn\": \"<string>\",\n      \"ttl\": \"<long>\"\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"<string>\",\n      \"port\": \"<long>\",\n      \"path\": \"<string>\",\n      \"intervalInSeconds\": \"<long>\",\n      \"timeoutInSeconds\": \"<long>\",\n      \"toleratedNumberOfFailures\": \"<long>\"\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"properties\": {\n          \"targetResourceId\": \"<string>\",\n          \"target\": \"<string>\",\n          \"endpointStatus\": \"<string>\",\n          \"weight\": \"<long>\",\n          \"priority\": \"<long>\",\n          \"endpointLocation\": \"<string>\",\n          \"endpointMonitorStatus\": \"<string>\",\n          \"geoMapping\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"properties\": {\n          \"targetResourceId\": \"<string>\",\n          \"target\": \"<string>\",\n          \"endpointStatus\": \"<string>\",\n          \"weight\": \"<long>\",\n          \"priority\": \"<long>\",\n          \"endpointLocation\": \"<string>\",\n          \"endpointMonitorStatus\": \"<string>\",\n          \"geoMapping\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"<string>\",\n    \"maxReturn\": \"<long>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "98f3cea9-9d70-459a-ac2d-3d4bdb99ab64",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"profileStatus\": \"<string>\",\n    \"trafficRoutingMethod\": \"<string>\",\n    \"dnsConfig\": {\n      \"relativeName\": \"string\",\n      \"fqdn\": \"string\",\n      \"ttl\": 8434\n    },\n    \"monitorConfig\": {\n      \"protocol\": \"TCP\",\n      \"port\": 5966,\n      \"path\": \"string\",\n      \"intervalInSeconds\": 9147,\n      \"timeoutInSeconds\": 9775,\n      \"toleratedNumberOfFailures\": 2010\n    },\n    \"endpoints\": [\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1604,\n          \"priority\": 7915,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"properties\": {\n          \"targetResourceId\": \"string\",\n          \"target\": \"string\",\n          \"endpointStatus\": \"Enabled\",\n          \"weight\": 1200,\n          \"priority\": 6272,\n          \"endpointLocation\": \"string\",\n          \"endpointMonitorStatus\": \"string\",\n          \"geoMapping\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ],\n    \"trafficViewEnrollmentStatus\": \"<string>\",\n    \"maxReturn\": \"<long>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "732377a6-44ef-4ebc-98c2-e9d1e23ef9b6",
+          "name": "Delete a Traffic Manager profile",
+          "request": {
+            "name": "Delete a Traffic Manager profile",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Network",
+                "trafficmanagerprofiles",
+                ":profileName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "profileName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abb2a5e8-96ff-4cd7-990c-18f1445a8c0f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6b460da4-12fd-4f8b-98d0-6d114c674b3b",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Network",
+                    "trafficmanagerprofiles",
+                    ":profileName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "profileName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4696d06f-70ae-46fa-9a87-6cc836584cb5",
+          "name": "Check Traffic Manager relative DNS name availability",
+          "request": {
+            "name": "Check Traffic Manager relative DNS name availability",
+            "description": {},
+            "url": {
+              "path": [
+                "providers",
+                "Microsoft.Network",
+                "checkTrafficManagerNameAvailabilityV2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2022-04-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "06809b08-8b9d-4329-b69e-faec86a0c8ec",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "providers",
+                    "Microsoft.Network",
+                    "checkTrafficManagerNameAvailabilityV2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2022-04-01"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user_impersonation"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "implicit"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "35b40f89-b2c1-4e46-b1d0-50aeccfa37ac",
+    "name": "Azure Traffic Manager REST Endpoints Profiles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,\nuser metrics, and geographic hierarchies via Azure Resource Manager.\nTraffic Manager is a DNS-based traffic load balancer that distributes\ntraffic optimally to services across global Azure regions.\nAuthentication uses Azure AD OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}

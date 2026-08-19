@@ -1,0 +1,161 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Traffic Manager REST Endpoints API",
+    "version": "2022-04-01"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "credentials": {
+        "clientId": "{{clientId}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Endpoints",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a Traffic Manager endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "profileName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a Traffic Manager endpoint"
+        },
+        {
+          "info": {
+            "name": "Create or update an endpoint within a Traffic Manager profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "profileName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or update an endpoint within a Traffic Manager profile"
+        },
+        {
+          "info": {
+            "name": "Delete a Traffic Manager endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/:endpointType/:endpointName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "profileName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "endpointName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a Traffic Manager endpoint"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Traffic Manager REST Endpoints HeatMap API",
+    "version": "2022-04-01"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "credentials": {
+        "clientId": "{{clientId}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "HeatMap",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get heatmap data for a Traffic Manager profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Network/trafficmanagerprofiles/:profileName/heatMaps/default",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "profileName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get heatmap data for a Traffic Manager profile"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

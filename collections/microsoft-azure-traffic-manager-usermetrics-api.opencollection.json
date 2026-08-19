@@ -1,0 +1,97 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Traffic Manager REST Endpoints UserMetrics API",
+    "version": "2022-04-01"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "credentials": {
+        "clientId": "{{clientId}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UserMetrics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the user metrics key",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the user metrics key"
+        },
+        {
+          "info": {
+            "name": "Create or update the user metrics key",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Create or update the user metrics key"
+        },
+        {
+          "info": {
+            "name": "Delete the user metrics key",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete the user metrics key"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

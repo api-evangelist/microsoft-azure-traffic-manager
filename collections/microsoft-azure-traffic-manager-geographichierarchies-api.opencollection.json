@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Traffic Manager REST Endpoints GeographicHierarchies API",
+    "version": "2022-04-01"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "credentials": {
+        "clientId": "{{clientId}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GeographicHierarchies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the default geographic hierarchy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/providers/Microsoft.Network/trafficManagerGeographicHierarchies/default",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the default geographic hierarchy"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
