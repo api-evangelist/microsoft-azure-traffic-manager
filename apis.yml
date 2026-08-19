@@ -24,7 +24,7 @@ tags:
 created: '2026-03-13'
 modified: '2026-05-19'
 url: https://azure.microsoft.com/en-us/services/traffic-manager/
-specificationVersion: '0.18'
+specificationVersion: '0.23'
 apis:
 - name: Azure Traffic Manager Endpoints REST API
   description: >-
