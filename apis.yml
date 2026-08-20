@@ -35,6 +35,9 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints
   baseURL: https://management.azure.com
   tags:
+  - Health Monitoring
+  - Traffic Manager
+  tags_raw:
   - Endpoints
   - Health Monitoring
   - Traffic Manager
@@ -107,7 +110,8 @@ apis:
   description: Endpoint operations within a profile
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
-  tags:
+  tags: []
+  tags_raw:
   - Endpoints
   properties:
   - type: OpenAPI
@@ -145,6 +149,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
   tags:
+  - Heatmap
+  tags_raw:
   - HeatMap
   properties:
   - type: OpenAPI
@@ -181,6 +187,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
   tags:
+  - User Metrics
+  tags_raw:
   - UserMetrics
   properties:
   - type: OpenAPI
