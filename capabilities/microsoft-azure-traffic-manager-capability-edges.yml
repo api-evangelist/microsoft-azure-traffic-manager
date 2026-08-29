@@ -1,0 +1,24 @@
+slug: microsoft-azure-traffic-manager
+provider: Azure Traffic Manager
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Profiles
+  spec_file: microsoft-azure-traffic-manager-profiles-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: profiles_createOrUpdate  Create or update a Traffic Manager profile
+  reason: Lifecycle management of DNS-based traffic-routing profiles via Azure Resource Manager is cloud
+    network infrastructure management, an IT infrastructure capability.

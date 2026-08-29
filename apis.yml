@@ -214,6 +214,9 @@ apis:
     url: >-
       https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
 common:
+  - type: CapabilityMap
+    url: capabilities/microsoft-azure-traffic-manager-capability-edges.yml
+    name: Azure Traffic Manager Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/azure-traffic-manager/overview
   - type: AgenticAccess
