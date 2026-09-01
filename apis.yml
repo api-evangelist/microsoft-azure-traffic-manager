@@ -161,7 +161,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
   tags:
-  - HeatMap
+  - Heatmap
   tags_raw:
   - HeatMap
   properties:
@@ -199,7 +199,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
   tags:
-  - UserMetrics
+  - User Metrics
   tags_raw:
   - UserMetrics
   properties:
