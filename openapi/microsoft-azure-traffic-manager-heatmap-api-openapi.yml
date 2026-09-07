@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Azure Traffic Manager REST Endpoints HeatMap API
+  title: Azure Traffic Manager REST Endpoints Heat Map API
   description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
 
     user metrics, and geographic hierarchies via Azure Resource Manager.
@@ -45,18 +45,19 @@ paths:
           description: OK
 components:
   parameters:
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
     subscriptionId:
       name: subscriptionId
       in: path
       required: true
       schema:
         type: string
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -65,13 +66,12 @@ components:
         type: string
         minLength: 1
         maxLength: 90
-    apiVersion:
-      name: api-version
-      in: query
+    profileName:
+      name: profileName
+      in: path
       required: true
       schema:
         type: string
-        default: '2022-04-01'
   securitySchemes:
     azure_auth:
       type: oauth2

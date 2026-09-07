@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Azure Traffic Manager REST Endpoints Profiles API
   description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
@@ -167,81 +167,6 @@ paths:
           description: OK
 components:
   schemas:
-    DnsConfig:
-      type: object
-      properties:
-        relativeName:
-          type: string
-        fqdn:
-          type: string
-        ttl:
-          type: integer
-          format: int64
-    MonitorConfig:
-      type: object
-      properties:
-        protocol:
-          type: string
-          enum:
-          - HTTP
-          - HTTPS
-          - TCP
-        port:
-          type: integer
-          format: int64
-        path:
-          type: string
-        intervalInSeconds:
-          type: integer
-          format: int64
-        timeoutInSeconds:
-          type: integer
-          format: int64
-        toleratedNumberOfFailures:
-          type: integer
-          format: int64
-    ProfileListResult:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Profile'
-    Endpoint:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        type:
-          type: string
-        properties:
-          type: object
-          properties:
-            targetResourceId:
-              type: string
-            target:
-              type: string
-            endpointStatus:
-              type: string
-              enum:
-              - Enabled
-              - Disabled
-            weight:
-              type: integer
-              format: int64
-            priority:
-              type: integer
-              format: int64
-            endpointLocation:
-              type: string
-            endpointMonitorStatus:
-              type: string
-            geoMapping:
-              type: array
-              items:
-                type: string
     Profile:
       type: object
       properties:
@@ -290,13 +215,89 @@ components:
             maxReturn:
               type: integer
               format: int64
+    ProfileListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Profile'
+    Endpoint:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        properties:
+          type: object
+          properties:
+            targetResourceId:
+              type: string
+            target:
+              type: string
+            endpointStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            weight:
+              type: integer
+              format: int64
+            priority:
+              type: integer
+              format: int64
+            endpointLocation:
+              type: string
+            endpointMonitorStatus:
+              type: string
+            geoMapping:
+              type: array
+              items:
+                type: string
+    MonitorConfig:
+      type: object
+      properties:
+        protocol:
+          type: string
+          enum:
+          - HTTP
+          - HTTPS
+          - TCP
+        port:
+          type: integer
+          format: int64
+        path:
+          type: string
+        intervalInSeconds:
+          type: integer
+          format: int64
+        timeoutInSeconds:
+          type: integer
+          format: int64
+        toleratedNumberOfFailures:
+          type: integer
+          format: int64
+    DnsConfig:
+      type: object
+      properties:
+        relativeName:
+          type: string
+        fqdn:
+          type: string
+        ttl:
+          type: integer
+          format: int64
   parameters:
-    subscriptionId:
-      name: subscriptionId
-      in: path
+    apiVersion:
+      name: api-version
+      in: query
       required: true
       schema:
         type: string
+        default: '2022-04-01'
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -311,13 +312,12 @@ components:
       required: true
       schema:
         type: string
-    apiVersion:
-      name: api-version
-      in: query
+    subscriptionId:
+      name: subscriptionId
+      in: path
       required: true
       schema:
         type: string
-        default: '2022-04-01'
   securitySchemes:
     azure_auth:
       type: oauth2
