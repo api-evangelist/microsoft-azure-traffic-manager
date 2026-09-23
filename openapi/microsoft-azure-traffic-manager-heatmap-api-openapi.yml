@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Traffic Manager REST Endpoints Heat Map API
+  title: Azure Traffic Manager REST Heat Map API
   description: 'REST API for managing Azure Traffic Manager profiles, endpoints, heatmaps,
 
     user metrics, and geographic hierarchies via Azure Resource Manager.
@@ -9,9 +9,7 @@ info:
 
     traffic optimally to services across global Azure regions.
 
-    Authentication uses Azure AD OAuth 2.0 bearer tokens.
-
-    '
+    Authentication uses Azure AD OAuth 2.0 bearer tokens.'
   version: '2022-04-01'
   contact:
     name: Kin Lane
@@ -45,12 +43,6 @@ paths:
           description: OK
 components:
   parameters:
-    subscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
     apiVersion:
       name: api-version
       in: query
@@ -58,6 +50,12 @@ components:
       schema:
         type: string
         default: '2022-04-01'
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
     resourceGroupName:
       name: resourceGroupName
       in: path

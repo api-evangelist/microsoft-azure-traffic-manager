@@ -9,9 +9,7 @@ info:
 
     traffic optimally to services across global Azure regions.
 
-    Authentication uses Azure AD OAuth 2.0 bearer tokens.
-
-    '
+    Authentication uses Azure AD OAuth 2.0 bearer tokens.'
   version: '2022-04-01'
   contact:
     name: Kin Lane
@@ -119,6 +117,12 @@ paths:
           description: No Content
 components:
   parameters:
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
     apiVersion:
       name: api-version
       in: query
@@ -126,6 +130,12 @@ components:
       schema:
         type: string
         default: '2022-04-01'
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -134,18 +144,6 @@ components:
         type: string
         minLength: 1
         maxLength: 90
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
-    subscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
     Endpoint:
       type: object
