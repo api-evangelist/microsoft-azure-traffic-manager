@@ -43,13 +43,12 @@ paths:
           description: OK
 components:
   parameters:
-    apiVersion:
-      name: api-version
-      in: query
+    profileName:
+      name: profileName
+      in: path
       required: true
       schema:
         type: string
-        default: '2022-04-01'
     subscriptionId:
       name: subscriptionId
       in: path
@@ -64,12 +63,13 @@ components:
         type: string
         minLength: 1
         maxLength: 90
-    profileName:
-      name: profileName
-      in: path
+    apiVersion:
+      name: api-version
+      in: query
       required: true
       schema:
         type: string
+        default: '2022-04-01'
   securitySchemes:
     azure_auth:
       type: oauth2
