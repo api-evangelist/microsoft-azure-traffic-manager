@@ -43,18 +43,6 @@ paths:
           description: OK
 components:
   parameters:
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
-    subscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -70,6 +58,18 @@ components:
       schema:
         type: string
         default: '2022-04-01'
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

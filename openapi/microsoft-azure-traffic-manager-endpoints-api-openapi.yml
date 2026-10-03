@@ -117,8 +117,8 @@ paths:
           description: No Content
 components:
   parameters:
-    subscriptionId:
-      name: subscriptionId
+    profileName:
+      name: profileName
       in: path
       required: true
       schema:
@@ -130,12 +130,6 @@ components:
       schema:
         type: string
         default: '2022-04-01'
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -144,6 +138,12 @@ components:
         type: string
         minLength: 1
         maxLength: 90
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
     Endpoint:
       type: object

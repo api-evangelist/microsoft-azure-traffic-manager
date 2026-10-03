@@ -164,70 +164,7 @@ paths:
         '200':
           description: OK
 components:
-  parameters:
-    subscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-    apiVersion:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2022-04-01'
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
-    resourceGroupName:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
-        minLength: 1
-        maxLength: 90
   schemas:
-    Endpoint:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        type:
-          type: string
-        properties:
-          type: object
-          properties:
-            targetResourceId:
-              type: string
-            target:
-              type: string
-            endpointStatus:
-              type: string
-              enum:
-              - Enabled
-              - Disabled
-            weight:
-              type: integer
-              format: int64
-            priority:
-              type: integer
-              format: int64
-            endpointLocation:
-              type: string
-            endpointMonitorStatus:
-              type: string
-            geoMapping:
-              type: array
-              items:
-                type: string
     Profile:
       type: object
       properties:
@@ -286,6 +223,13 @@ components:
         ttl:
           type: integer
           format: int64
+    ProfileListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Profile'
     MonitorConfig:
       type: object
       properties:
@@ -309,13 +253,69 @@ components:
         toleratedNumberOfFailures:
           type: integer
           format: int64
-    ProfileListResult:
+    Endpoint:
       type: object
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Profile'
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        properties:
+          type: object
+          properties:
+            targetResourceId:
+              type: string
+            target:
+              type: string
+            endpointStatus:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+            weight:
+              type: integer
+              format: int64
+            priority:
+              type: integer
+              format: int64
+            endpointLocation:
+              type: string
+            endpointMonitorStatus:
+              type: string
+            geoMapping:
+              type: array
+              items:
+                type: string
+  parameters:
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2
