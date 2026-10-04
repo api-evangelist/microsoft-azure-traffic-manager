@@ -117,19 +117,6 @@ paths:
           description: No Content
 components:
   parameters:
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
-    apiVersion:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2022-04-01'
     resourceGroupName:
       name: resourceGroupName
       in: path
@@ -144,6 +131,19 @@ components:
       required: true
       schema:
         type: string
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
   schemas:
     Endpoint:
       type: object
