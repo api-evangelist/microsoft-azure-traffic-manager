@@ -214,6 +214,10 @@ apis:
     url: >-
       https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile
 common:
+  - type: RateLimits
+    url: rate-limits/microsoft-azure-traffic-manager-rate-limits.yml
+  - type: FinOps
+    url: finops/microsoft-azure-traffic-manager-finops.yml
   - type: Plans
     url: plans/microsoft-azure-traffic-manager-plans-pricing.yml
   - type: CapabilityMap
