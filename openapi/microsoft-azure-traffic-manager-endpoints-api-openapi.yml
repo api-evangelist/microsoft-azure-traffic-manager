@@ -116,34 +116,6 @@ paths:
         '204':
           description: No Content
 components:
-  parameters:
-    resourceGroupName:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
-        minLength: 1
-        maxLength: 90
-    subscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-    profileName:
-      name: profileName
-      in: path
-      required: true
-      schema:
-        type: string
-    apiVersion:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2022-04-01'
   schemas:
     Endpoint:
       type: object
@@ -180,6 +152,34 @@ components:
               type: array
               items:
                 type: string
+  parameters:
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    profileName:
+      name: profileName
+      in: path
+      required: true
+      schema:
+        type: string
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2022-04-01'
   securitySchemes:
     azure_auth:
       type: oauth2

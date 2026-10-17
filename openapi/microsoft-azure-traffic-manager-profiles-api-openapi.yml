@@ -210,6 +210,36 @@ components:
               type: array
               items:
                 type: string
+    MonitorConfig:
+      type: object
+      properties:
+        protocol:
+          type: string
+          enum:
+          - HTTP
+          - HTTPS
+          - TCP
+        port:
+          type: integer
+          format: int64
+        path:
+          type: string
+        intervalInSeconds:
+          type: integer
+          format: int64
+        timeoutInSeconds:
+          type: integer
+          format: int64
+        toleratedNumberOfFailures:
+          type: integer
+          format: int64
+    ProfileListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Profile'
     Profile:
       type: object
       properties:
@@ -258,45 +288,7 @@ components:
             maxReturn:
               type: integer
               format: int64
-    ProfileListResult:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Profile'
-    MonitorConfig:
-      type: object
-      properties:
-        protocol:
-          type: string
-          enum:
-          - HTTP
-          - HTTPS
-          - TCP
-        port:
-          type: integer
-          format: int64
-        path:
-          type: string
-        intervalInSeconds:
-          type: integer
-          format: int64
-        timeoutInSeconds:
-          type: integer
-          format: int64
-        toleratedNumberOfFailures:
-          type: integer
-          format: int64
   parameters:
-    resourceGroupName:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
-        minLength: 1
-        maxLength: 90
     subscriptionId:
       name: subscriptionId
       in: path
@@ -309,6 +301,14 @@ components:
       required: true
       schema:
         type: string
+    resourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 90
     apiVersion:
       name: api-version
       in: query
