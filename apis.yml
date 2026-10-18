@@ -91,6 +91,10 @@ apis:
   tags:
   - Performance
   - Real User Measurements
+  - UserMetrics
+  tags_raw:
+  - Performance
+  - Real User Measurements
   - User Metrics
   properties:
   - type: Documentation
@@ -199,7 +203,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles
   baseURL: https://management.azure.com
   tags:
-  - User Metrics
+  - UserMetrics
   tags_raw:
   - UserMetrics
   properties:
