@@ -1,28 +1,19 @@
 {
   "provider": "microsoft-azure-traffic-manager",
   "sources": [
-    "_original/microsoft-azure-traffic-manager-openapi.yml"
+    "_original/microsoft-azure-traffic-manager-openapi.json"
   ],
   "outputs": [
-    "microsoft-azure-traffic-manager-endpoints-api-openapi.yml",
-    "microsoft-azure-traffic-manager-geographichierarchies-api-openapi.yml",
-    "microsoft-azure-traffic-manager-heatmap-api-openapi.yml",
-    "microsoft-azure-traffic-manager-profiles-api-openapi.yml",
-    "microsoft-azure-traffic-manager-usermetrics-api-openapi.yml"
+    "microsoft-azure-traffic-manager-webapps-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "microsoft-azure-traffic-manager-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "microsoft-azure-traffic-manager-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "microsoft-azure-traffic-manager-openapi.json: declared missing tag: WebApps",
+    "apis.yml register: written (+1 apis, 5 total)"
   ],
-  "skipped": [
-    "microsoft-azure-traffic-manager-endpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-traffic-manager-geographichierarchies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-traffic-manager-heatmap-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-traffic-manager-profiles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-traffic-manager-usermetrics-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }
