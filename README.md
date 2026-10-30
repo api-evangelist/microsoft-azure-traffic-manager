@@ -1,4 +1,4 @@
-# Azure Traffic Manager (microsoft-azure-traffic-manager)
+# Azure Traffic Manager
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,159 +66,154 @@
 
 Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. It supports configurable routing methods including priority, weighted, performance, geographic, multivalue, and subnet routing.
 
-**APIs.json:** [https://azure.microsoft.com/en-us/services/traffic-manager/](https://azure.microsoft.com/en-us/services/traffic-manager/)
+**Areas:** DNS Load Balancing · Failover · Global Routing · Networking · Traffic Distribution · Traffic Manager
 
-## Tags
+## Azure Traffic Manager on APIs.io
 
-- DNS Load Balancing
-- Failover
-- Global Routing
-- Networking
-- Traffic Distribution
-- Traffic Manager
+Everything profiled for Azure Traffic Manager is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-azure-traffic-manager/](https://apis.io/providers/microsoft-azure-traffic-manager/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (9)
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+- [Azure Traffic Manager Endpoints REST API](https://apis.io/apis/microsoft-azure-traffic-manager/azure-traffic-manager-endpoints-rest-api/) — REST API for managing endpoints within a Traffic Manager profile. Supports adding, updating, and removing Azure, external, and nested endpoints that receive…
+- [Azure Traffic Manager Heatmap REST API](https://apis.io/apis/microsoft-azure-traffic-manager/azure-traffic-manager-heatmap-rest-api/) — REST API for retrieving Traffic Manager heatmap data, which provides geographic visualization of DNS query volumes and endpoint selection by region. Useful…
+- [Azure Traffic Manager User Metrics REST API](https://apis.io/apis/microsoft-azure-traffic-manager/azure-traffic-manager-user-metrics-rest-api/) — REST API for managing real user measurements (RUM) keys used by Traffic Manager performance routing. User metrics enable Traffic Manager to make more…
+- [Azure Traffic Manager Geographic Hierarchies REST API](https://apis.io/apis/microsoft-azure-traffic-manager/azure-traffic-manager-geographic-hierarchies-rest-api/) — REST API for retrieving the geographic hierarchy used by Traffic Manager for geographic routing. Returns the supported regions, countries, and subdivisions…
+- [Azure Traffic Manager Endpoints API](https://apis.io/apis/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-endpoints-api/) — Endpoint operations within a profile
+- [Azure Traffic Manager GeographicHierarchies API](https://apis.io/apis/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-geographichierarchies-api/) — Default geographic hierarchy
+- [Azure Traffic Manager HeatMap API](https://apis.io/apis/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-heatmap-api/) — Geographic heatmap analytics
+- [Azure Traffic Manager Profiles API](https://apis.io/apis/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-profiles-api/) — Traffic Manager profile operations
+- [Azure Traffic Manager UserMetrics API](https://apis.io/apis/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-usermetrics-api/) — Real User Measurements (RUM) keys
 
-## APIs
+### Published properties
 
-### Azure Traffic Manager Profiles REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for creating, configuring, and managing Traffic Manager profiles. Profiles define the global DNS-based load balancing configuration including routing method, monitoring settings, and the collection of endpoints participating in the profile.
+#### MCP servers (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles](https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles)
-- **Base URL:** `https://management.azure.com`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [MCP Server](https://apis.io/servers/microsoft-azure-traffic-manager/mcp-server/)
 
-- Profiles
-- Routing
-- Traffic Manager
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Reference](https://learn.microsoft.com/en-us/rest/api/trafficmanager/profiles?view=rest-trafficmanager-2022-04-01)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile)
-- [Postman Collection](collections/microsoft-azure-traffic-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-traffic-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Microsoft Azure Traffic Manager Agentic Access](https://apis.io/agentic-access/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-agentic-access/)
 
-### Azure Traffic Manager Endpoints REST API
+#### Collections (11)
 
-REST API for managing endpoints within a Traffic Manager profile. Supports adding, updating, and removing Azure, external, and nested endpoints that receive traffic according to the profile's routing method and health monitoring configuration.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints](https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints)
-- **Base URL:** `https://management.azure.com`
+- [Azure Traffic Manager REST API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager/)
+- [Azure Traffic Manager REST Endpoints API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager-endpoints-api/)
+- [Azure Traffic Manager REST Endpoints GeographicHierarchies API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager-geographichierarchies-api/)
+- [Azure Traffic Manager REST Endpoints HeatMap API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager-heatmap-api/)
+- [Azure Traffic Manager REST Endpoints Profiles API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager-profiles-api/)
+- [Azure Traffic Manager REST Endpoints UserMetrics API](https://apis.io/collections/microsoft-azure-traffic-manager/open-microsoft-azure-traffic-manager-usermetrics-api/)
+- [Azure Traffic Manager REST Endpoints API](https://apis.io/collections/microsoft-azure-traffic-manager/postman-microsoft-azure-traffic-manager-endpoints-api/)
+- [Azure Traffic Manager REST Endpoints GeographicHierarchies API](https://apis.io/collections/microsoft-azure-traffic-manager/postman-microsoft-azure-traffic-manager-geographichierarchies-api/)
+- [Azure Traffic Manager REST Endpoints HeatMap API](https://apis.io/collections/microsoft-azure-traffic-manager/postman-microsoft-azure-traffic-manager-heatmap-api/)
+- [Azure Traffic Manager REST Endpoints Profiles API](https://apis.io/collections/microsoft-azure-traffic-manager/postman-microsoft-azure-traffic-manager-profiles-api/)
+- [Azure Traffic Manager REST Endpoints UserMetrics API](https://apis.io/collections/microsoft-azure-traffic-manager/postman-microsoft-azure-traffic-manager-usermetrics-api/)
 
-#### Tags
+#### Security (2)
 
-- Endpoints
-- Health Monitoring
-- Traffic Manager
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Microsoft Azure Traffic Manager Authentication](https://apis.io/security/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-authentication/)
+- [Microsoft Azure Traffic Manager Domain Security](https://apis.io/security/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-domain-security/)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints)
-- [Reference](https://learn.microsoft.com/en-us/rest/api/trafficmanager/endpoints?view=rest-trafficmanager-2022-04-01)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types)
-- [Postman Collection](collections/microsoft-azure-traffic-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-traffic-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### OAuth scopes (1)
 
-### Azure Traffic Manager Heatmap REST API
+The permissions the API asks for.
 
-REST API for retrieving Traffic Manager heatmap data, which provides geographic visualization of DNS query volumes and endpoint selection by region. Useful for analyzing traffic distribution and routing decisions across the global user base.
+- [Microsoft Azure Traffic Manager Scopes](https://apis.io/scopes/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-scopes/)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map](https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map)
-- **Base URL:** `https://management.azure.com`
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Analytics
-- Heatmap
-- Traffic Analytics
+- [Microsoft Azure Traffic Manager Plans Pricing](https://apis.io/plans/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map)
-- [Reference](https://learn.microsoft.com/en-us/rest/api/trafficmanager/heat-map/get?view=rest-trafficmanager-2022-04-01)
-- [Postman Collection](collections/microsoft-azure-traffic-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-traffic-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published request limits.
 
-### Azure Traffic Manager User Metrics REST API
+- [Microsoft Azure Traffic Manager Rate Limits](https://apis.io/rate-limits/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-rate-limits/)
 
-REST API for managing real user measurements (RUM) keys used by Traffic Manager performance routing. User metrics enable Traffic Manager to make more accurate latency-based routing decisions using telemetry from end users.
+#### FinOps (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys](https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys)
-- **Base URL:** `https://management.azure.com`
+What the API costs to run, by operation.
 
-#### Tags
+- [Microsoft Azure Traffic Manager Finops](https://apis.io/finops/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-finops/)
 
-- Performance
-- Real User Measurements
-- User Metrics
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys)
-- [Reference](https://learn.microsoft.com/en-us/rest/api/trafficmanager/traffic-manager-user-metrics-keys?view=rest-trafficmanager-2022-04-01)
-- [Postman Collection](collections/microsoft-azure-traffic-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-traffic-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Traffic Manager Geographic Hierarchies REST API
-
-REST API for retrieving the geographic hierarchy used by Traffic Manager for geographic routing. Returns the supported regions, countries, and subdivisions that can be configured as endpoint geo-mappings within geographic routing profiles.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies](https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Geographic Hierarchy
-- Geographic Routing
-- Regions
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies)
-- [Reference](https://learn.microsoft.com/en-us/rest/api/trafficmanager/geographic-hierarchies/get-default?view=rest-trafficmanager-2022-04-01)
-- [Postman Collection](collections/microsoft-azure-traffic-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-traffic-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://portal.azure.com/)
 - [Website](https://azure.microsoft.com/en-us/products/traffic-manager)
 - [Documentation](https://learn.microsoft.com/en-us/azure/traffic-manager/)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile)
-- [Authentication](https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-scenarios)
+- [Getting started](https://learn.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile)
 - [Pricing](https://azure.microsoft.com/en-us/pricing/details/traffic-manager/)
-- [S L A](https://azure.microsoft.com/en-us/support/legal/sla/traffic-manager/)
-- [Status Page](https://status.azure.com/)
-- [Blog](https://azure.microsoft.com/en-us/blog/topics/networking/)
 - [Support](https://azure.microsoft.com/en-us/support/options/)
-- [Terms of Service](https://azure.microsoft.com/en-us/support/legal/)
-- [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
-- [Sign Up](https://azure.microsoft.com/en-us/free)
-- [Login](https://portal.azure.com)
-- [S D Ks](https://azure.microsoft.com/en-us/downloads/)
-- [S D K -  Python](https://pypi.org/project/azure-mgmt-trafficmanager/)
-- [S D K - . N E T](https://www.nuget.org/packages/Azure.ResourceManager.TrafficManager)
-- [S D K -  Java Script](https://www.npmjs.com/package/@azure/arm-trafficmanager)
-- [S D K -  Java](https://learn.microsoft.com/en-us/java/api/overview/azure/resourcemanager-trafficmanager-readme)
-- [C L I  Tools](https://learn.microsoft.com/en-us/cli/azure/network/traffic-manager)
 - [Changelog](https://azure.microsoft.com/en-us/updates/?product=traffic-manager)
-- [GitHub Organization](https://github.com/Azure)
-- [Git Hub  R E S T  A P I  Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/trafficmanager)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-traffic-manager)
-- [Community](https://learn.microsoft.com/en-us/answers/tags/175/azure-traffic-manager)
-- [F A Q](https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-FAQs)
-- [Training](https://learn.microsoft.com/en-us/training/modules/distribute-load-with-traffic-manager/)
-- [M C P Server](https://github.com/Azure/Azure-Resource-Manager-MCP)
+- [Blog](https://azure.microsoft.com/en-us/blog/topics/networking/)
+- [Terms of service](https://azure.microsoft.com/en-us/support/legal/)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/Azure)
+- [Status](https://status.azure.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 52.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 30.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 66.2 |
+| Access clarity | 76.3 |
+
+**Agent readiness 21.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-azure-traffic-manager/](https://apis.io/providers/microsoft-azure-traffic-manager/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Azure Traffic Manager: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-azure-traffic-manager/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
